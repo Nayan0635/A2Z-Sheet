@@ -1,0 +1,38 @@
+1. cann't print 2D vector?
+    for(auto& row: arr){
+            for (int element : row){
+                cout<<element<<" ";
+            }
+    }
+2. `==` comparing operator & `=` is assignment operator
+3. vector<int> arr(size,set_values);
+   int arr[size] = {value};
+4. return {}; return empty vector
+   return {abla, tabla}; for pair
+5. sizeof(arr)/sizeof(arr[0]) --> when you pass as array to a function in c++, the array decays to a pointer.
+                                  this means that within the function, the array is treated as a pointer to the first element .
+                                  therefore , sizeof(arr) nside the function will give the size of the pointer (typically 4 or 8 bytes)
+                                  rather than the size of the entire array.
+6. sort an array sort(arr,arr+n); <algorithm>
+   sort an vector(vec.begin(), vec.end());
+   int arr[m+n];
+   vector<int> arr(m+n);
+7. lower_bound(arr.begin(),arr.end(),target) --> it will return an iterator that is pointing to that index
+                subtract [arr.begin()] begginer iterator to get the index;       
+8. return vector -->cout<<ans[0]<<ans[1]
+   return pair   -->cout<<ans.first<<ans.second;
+9. max_element(vec.begin(), vec.end()) --> returns an iterator pointing to the max element
+                                           to get the value we use the * operator at the beginning
+    max_element(arr,arr + n) ;
+10. #include<algorithm>
+     int low = *max_element(arr.begin(), arr.end());
+     #include<numeric>
+     int high = accumulate(weights.begin(), weights.end(), 0); sum of all elements
+     #include<climits>
+     int max = INT_MAX; int min = INT_MIN;
+11. cout<<boolalpha<<function(arr,k); return true/false;
+    mid, low, high is the index & arr[mid], arr[low], arr[high] is the element;
+12. vector<int> vec(n, 0); container having 0s
+      int arr[n] = {0};
+     
+                                           

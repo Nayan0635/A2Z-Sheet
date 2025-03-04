@@ -1,0 +1,11 @@
+#include<climits>
+    int max = INT_MAX; int min = INT_MIN;
+#include<numeric>
+    int high = accumulate(weights.begin(), weights.end(), 0);//sum of all elements
+#include<algorithm>
+    *max_element(vec.begin(), vec.end());
+    max_element(vec.begin(), vec.end()) - vec.begin();
+    max_element(arr, arr+n);
+    sort(arr,arr+n);
+    sort(vec.begin(), vec.end());
+#include<bits/stdc++.h>//boss library

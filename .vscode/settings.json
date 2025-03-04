@@ -1,0 +1,68 @@
+{
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.saveFileBeforeRun": true,
+    "editor.accessibilitySupport": "off",
+    "editor.fastScrollSensitivity": 2,
+    "editor.guides.bracketPairs": true,
+    "editor.mouseWheelZoom": true,
+    "editor.scrollbar.horizontalScrollbarSize": 20,
+    "code-runner.runInTerminal": true,
+    "workbench.list.fastScrollSensitivity": 1,
+    "screencastMode.mouseIndicatorColor": "#d250a5",
+    "files.refactoring.autoSave": false,
+    // "editor.semanticTokenColorCustomizations": {
+    //},
+    "editor.tokenColorCustomizations": {
+
+        // "textMateRules":[
+        //     {
+        //         "scope": "comment",//<- XD
+        //         "settings":{
+        //             "foreground": "#8f8f8d"
+        //         }
+        //     },
+        //     {
+        //         "scope": [//change color of int "main()" & function name
+        //             "entity.name.function",
+        //             "support.function",
+        //             "entity.name.function.user"
+        //         ],
+        //         "settings":{
+        //             "foreground": "#00ccff"
+        //         }
+        //     },
+        //     {
+        //         "scope": [//change color of #include, for loop, if else statement, return
+        //             "keyword.control.directive.include",
+        //             "keyword.control.directive.define",//#define
+        //             "keyword.control.directive.undef",//#undef
+        //             "keyword.other.using",
+        //             "keyword.control.if",
+        //             "keyword.control.else",
+        //             "keyword.control.for",
+        //             "keyword.control.break",
+        //             "keyword.control.return"
+        //         ],
+        //         "settings":{
+        //             "foreground": "#ff008c"
+        //         }
+        //     },
+        //     {
+        //         "scope": [//change color of int header file
+        //             "string.quoted.other.lt-gt.include",
+        //             "string.quoted.other.include",
+        //         ],
+        //         "settings":{
+        //             "foreground": "#e39125"
+        //         }
+        //     }
+        // ]
+    },
+    "workbench.colorTheme": "JellyFish",
+    "editor.semanticTokenColorCustomizations": {
+
+    },
+    "files.associations": {
+        "iostream": "cpp"
+    },
+}

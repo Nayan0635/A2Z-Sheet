@@ -1,0 +1,8 @@
+1. d3_p2 Remove duplicates from sorted array
+2. d6_p1.check
+3. d8_p1.remaining done but not
+4. d7_p1.remaining
+5. binary search
+6. d7_p3
+7. countOccurence
+8. return (double)((double)(arr[k/2]) + (double)(arr[k/2 - 1]))/2.0; how?
