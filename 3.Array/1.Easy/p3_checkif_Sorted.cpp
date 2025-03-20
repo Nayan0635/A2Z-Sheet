@@ -14,9 +14,7 @@ public:
     bool check(vector<int>& nums) {
         if (nums.size() == 1) return true;
         for (int i = 0; i < nums.size(); i++){
-            if (/* condition */){
-                /* code */
-            }
+            
             
         }
         

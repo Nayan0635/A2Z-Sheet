@@ -6,7 +6,7 @@
 using namespace std;
 
 class Solution{
-    public://Better
+    public://Optimal
     int getSecondLargest(vector<int> &arr){
         if(arr.size() < 2) return -1;
         int largest = INT_MIN;
@@ -26,7 +26,6 @@ int main(){
     cout<<s.getSecondLargest(vec);
     return 0;
 }
-// class Solution{
 //     public://Brute
 //     int getSecondLargest(vector<int> &arr){//if there is not any duplicate
 //         if(arr.size() < 2) return -1;
@@ -34,9 +33,11 @@ int main(){
 //         return arr[arr.size() - 2];
 //     }
 //
+//     public: //Better
 //     int getSecondLargest(vector<int> &arr){
 //         if(arr.size() < 2) return -1;
-//         int largest = *max_element(arr.begin(),arr.end());//O(n)
+//         int largest = *max_element(arr.begin(),arr.end());//O(n)-->get actual largest
+//
 //         int slargest = INT_MIN;
 //         for (int i = 0; i < arr.size(); i++){//O(n)
 //             if (arr[i]>slargest && arr[i]!= largest){
@@ -45,4 +46,3 @@ int main(){
 //         }
 //         return slargest;
 //     }
-// };

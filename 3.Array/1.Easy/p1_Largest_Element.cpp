@@ -4,13 +4,12 @@
 #include<algorithm>
 using namespace std;
 
-class Solution{
+class Solution{//recursive approach
     public:
     int largest(vector<int> &arr){
         int maxi = arr[0];
-        for (int i = 1; i < arr.size(); i++){ //T.C. O(N)
+        for (int i = 1; i < arr.size(); i++) //T.C. O(N)
             if(arr[i] > maxi) maxi = arr[i];
-        }
         return maxi;
     }
 };
@@ -26,4 +25,4 @@ int main(){
 //         sort(arr.begin(),arr.end()); T.C. O(NlogN)
 //         return arr.back(); S.C. O(n)
 //     }
-// }; then recursive approach
+// }; 
