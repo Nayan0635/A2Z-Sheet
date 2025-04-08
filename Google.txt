@@ -1,0 +1,1 @@
+Get-ChildItem -Dictonary -Name "Day*" | ForEachObject {Rename-Item $_ -NewName($_ - replace "Day" , "Tutorial#") }
