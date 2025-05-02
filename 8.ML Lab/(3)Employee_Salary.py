@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 from sklearn.metrics import  r2_score
 df = pd.read_csv(r"C:\Users\nayan\Python\DataBase\salary_data.csv")
 df.head()
@@ -25,12 +24,15 @@ for epoch in range(epochs):
     if epoch % 100 == 0:
         print(f"Epoch {epoch}, Loss: {loss:.4f}")
 print(f"Final Parameters: theta0 = {theta0:.4f}, theta1 = {theta1:.4f}")
+
+import matplotlib.pyplot as plt
 plt.plot(range(epochs), loss_history, color='blue', alpha = 0.5)
 plt.xlabel("Epochs")
 plt.ylabel("Loss (MSE)")
 plt.title("Loss Curve for Gradient Descent")
 plt.show()
-plt.scatter(x, y, color='blue', alpha = 0.5, label="Actual Data")
+
+plt.scatter(x, y, color='blue', label="Actual Data")
 y_line = theta0 + theta1 * x
 plt.plot(x, y_line, color='red', label="Regression Line")
 plt.xlabel("Years of Experience")
@@ -38,6 +40,7 @@ plt.ylabel("Salary")
 plt.title("Salary Prediction using Gradient Descent")
 plt.legend()
 plt.show()
+
 y_pred_final = theta0 + theta1 * x
 r2 = r2_score(y, y_pred_final)
 print(f"R² Score: {r2:.4f}")

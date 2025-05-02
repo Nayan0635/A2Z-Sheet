@@ -1,9 +1,6 @@
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 
-from sklearn.model_selection import train_test_split
+
 from sklearn.preprocessing import LabelEncoder
 from sklearn.tree import DecisionTreeClassifier, export_graphviz
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
@@ -11,13 +8,11 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import graphviz
 
 # Load the dataset
+import pandas as pd
 df = pd.read_csv(r"C:\Users\nayan\Python\DataBase\drug.csv")
 
-# Display the first 5 rows
-print(df.head())
-
-# Check for missing values
-print(df.isnull().sum())
+# #Check for missing values
+# print(df.isnull().sum())
 
 # Convert categorical features into numerical values using Label Encoding
 le_sex = LabelEncoder()
@@ -36,7 +31,7 @@ df['Drug'] = le_drug.fit_transform(df['Drug'])  # Encode target variable
 X = df.drop(columns=['Drug'])  # Features: Age, Sex, BP, Cholesterol, Na_to_K
 y = df['Drug']  # Target: Drug category
 
-# Split into training (80%) and testing (20%) sets
+from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Print dataset shapes
@@ -61,6 +56,8 @@ print("\nClassification Report:\n", classification_report(y_test, y_pred))
 
 # Confusion Matrix
 cm = confusion_matrix(y_test, y_pred)
+import matplotlib.pyplot as plt
+import seaborn as sns
 sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
 plt.xlabel("Predicted")
 plt.ylabel("Actual")

@@ -1,17 +1,9 @@
-import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.neighbors import KNeighborsClassifier
+
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
+import pandas as pd
 df = pd.read_csv(r"C:\Users\nayan\Python\DataBase\teleCust.csv")
-print(df.head())
-
-# Check for missing values
-print(df.isnull().sum())
 
 # Check the data types
 print(df.dtypes)
@@ -27,7 +19,8 @@ X = df.drop(columns=['custcat'])
 # Define target variable
 y = df['custcat']
 
-# Split into training (80%) and testing (20%) sets
+# Split into training and testing 
+from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Print dataset shapes
@@ -35,11 +28,13 @@ print(f"Training Data Shape: {X_train.shape}")
 print(f"Testing Data Shape: {X_test.shape}")
 
 # Standardize feature variables
+from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
 # Define KNN classifier with k=5
+from sklearn.neighbors import KNeighborsClassifier
 knn = KNeighborsClassifier(n_neighbors=5)
 
 # Train the model
@@ -57,6 +52,9 @@ print("\nClassification Report:\n", classification_report(y_test, y_pred))
 
 # Confusion Matrix
 cm = confusion_matrix(y_test, y_pred)
+
+import matplotlib.pyplot as plt
+import seaborn as sns
 sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
 plt.xlabel("Predicted")
 plt.ylabel("Actual")

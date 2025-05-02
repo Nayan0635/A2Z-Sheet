@@ -3,7 +3,6 @@
 # read the file
 import pandas as pd
 df = pd.read_csv(r"C:\Users\nayan\Python\DataBase\used_cars_dataset.csv")
-print(df.head()) #print the dataset
 
 # feature engineering
 from sklearn.preprocessing import LabelEncoder
@@ -35,8 +34,8 @@ print("R2 Score: ",r2)
 
 # Graph plot
 import matplotlib.pyplot as plt
-plt.figure(figsize = (8,6))
-plt.scatter(y_test, y_pred, color = 'red', alpha=0.2)
+# plt.figure(figsize = (8,6))
+plt.scatter(y_test, y_pred, color = 'red')
 plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], color = 'black', linestyle = 'dashed')
 
 plt.title("Actusl vs Predicted Car price")

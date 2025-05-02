@@ -1,11 +1,9 @@
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from sklearn.metrics import r2_score
 
+import pandas as pd
 df = pd.read_csv(r"C:\Users\nayan\Python\DataBase\china_gdp.csv")
-df.head()
 
 def sigmoid(x, L, k, x0):
     return L / (1 + np.exp(-k * (x - x0)))
@@ -18,7 +16,9 @@ print(f"Optimized Parameters: L={L_opt:.4f}, k={k_opt:.4f}, t0={x0_opt:.4f}")
 
 x_range = np.linspace(min(x), max(x), 100)
 y_pred = sigmoid(x_range, L_opt, k_opt, x0_opt)
-plt.scatter(x, y, label="Actual GDP Data", color="blue", alpha = 0.5)
+
+import matplotlib.pyplot as plt
+plt.scatter(x, y, label="Actual GDP Data", color="blue")
 plt.plot(x_range, y_pred, label="Sigmoid Fit", color="red")
 plt.xlabel("Year")
 plt.ylabel("GDP (Trillion USD)")
