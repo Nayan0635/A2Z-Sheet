@@ -8,7 +8,6 @@ df = pd.read_csv(r"C:\Users\nayan\Python\DataBase\cancer.csv")
 # print("Dataset Preview:\n", df.head())
 # print("\nDataset Info:")
 # print(df.info())
-print("\nMissing Values in Each Column:\n", df.isnull().sum())
 print("\nChecking for '?' values:\n", df.isin(["?"]).sum())
 
 df["Class"] = df["Class"].replace({2: 0, 4: 1})
