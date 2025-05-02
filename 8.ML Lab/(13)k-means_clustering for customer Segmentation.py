@@ -1,17 +1,15 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
-import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from scipy.spatial.distance import cdist
 
-# 1. Load Data
-data = pd.read_csv(r"C:\Users\nayan\Python\DataBase\Cust_Segmentation.csv")
+df = pd.read_csv(r"C:\Users\nayan\Python\DataBase\Cust_Segmentation.csv")
 
-# 2. Preprocess Data
-# Drop Customer Id and Address (non-informative for clustering)
-data_clean = data.drop(['Customer Id', 'Address'], axis=1)
+data_clean = df.drop(['Customer Id', 'Address'], axis=1)
 
 # Optional: remove 'Defaulted' if you consider it target
 data_clean = data_clean.drop(['Defaulted'], axis=1)

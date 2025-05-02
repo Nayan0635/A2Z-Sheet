@@ -8,8 +8,6 @@ from sklearn.cluster import AgglomerativeClustering
 # Step 1: Load data
 data = pd.read_csv(r"C:\Users\nayan\Python\DataBase\cars_clus.csv")
 
-# Step 2: Preprocess
-
 # Drop non-numeric columns
 data_clean = data.drop(['manufact', 'model', 'type', 'partition'], axis=1)
 

@@ -14,9 +14,6 @@ from sklearn.metrics import (
 # Load the data
 df = pd.read_csv(r"C:\Users\nayan\Python\DataBase\cancer.csv")
 
-# Display basic info
-df.head()
-
 # Remove ID column and handle non-numeric issues
 df = df.drop("ID", axis=1)
 df = df.replace('?', np.nan)
@@ -25,9 +22,9 @@ df = df.dropna()
 # Convert to numeric (especially 'BareNuc')
 df = df.astype(float)
 
-# Features and target
-X = df.drop("Class", axis=1)
-y = df["Class"]
+# select features and targets
+X = df.iloc[:, : -1]
+y = df.iloc[:, -1]
 
 # Split the dataset
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -51,12 +48,12 @@ def evaluate_model(model, kernel_name):
     cm = confusion_matrix(y_test, y_pred)
 
     print(f"\n--- {kernel_name.upper()} Kernel ---")
-    print(f"Accuracy      : {acc:.2f}")
-    print(f"Recall        : {rec:.2f}")
-    print(f"Precision     : {prec:.2f}")
-    print(f"F1 Score      : {f1:.2f}")
-    print(f"Jaccard Score : {jacc:.2f}")
-    print(f"Error Rate    : {err:.2f}")
+    print(f"Accuracy      : {acc}")
+    print(f"Recall        : {rec}")
+    print(f"Precision     : {prec}")
+    print(f"F1 Score      : {f1}")
+    print(f"Jaccard Score : {jacc}")
+    print(f"Error Rate    : {err}")
     print("Confusion Matrix:\n", cm)
 
     fpr, tpr, _ = roc_curve(y_test, y_scores, pos_label=4)
@@ -72,7 +69,7 @@ for kernel in kernels:
 
 plt.figure(figsize=(10, 6))
 for fpr, tpr, roc_auc, label in roc_data:
-    plt.plot(fpr, tpr, label=f"{label} (AUC = {roc_auc:.2f})")
+    plt.plot(fpr, tpr, label=f"{label} (AUC = {roc_auc})")
 
 plt.plot([0, 1], [0, 1], 'k--', label='Random Guess')
 plt.xlabel('False Positive Rate')
