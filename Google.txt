@@ -1,1 +1,37 @@
-Get-ChildItem -Dictonary -Name "Day*" | ForEachObject {Rename-Item $_ -NewName($_ - replace "Day" , "Tutorial#") }
+#include<bits/stdc++.h>.....master library
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<climits>
+using namespace std;
+
+class Solution{
+    public:
+    //brute force
+    int largest(vector<int> &arr){
+        arr.sort(arr.begin(), arr.end())
+        return arr.back();
+    }
+    //optimal solution
+    int largest(vector<int> &arr){
+        int maxi = INT_MIN;
+        for(int i = 0; i< arr.size(); i++){
+            if(arr[i] > maxi)
+                maxi = arr[i];
+        }
+    }
+    return maxi;
+    int slargest(vector<int> &arr){
+        int largest = INT_MIN, slargest = INT_MIN;
+
+        for(int i = 0; i< arr.size()){
+
+        }
+    }
+};
+int main(){
+    vector<int> arr = {2, 13, 4 , 7, 8, 15, 3}
+    Solution s;
+    cout<<"largest element is: "<<s.largest(arr);
+    return 0;
+}
