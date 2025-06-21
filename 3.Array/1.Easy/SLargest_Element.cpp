@@ -6,12 +6,28 @@
 using namespace std;
 
 class Solution{
-    public://Optimal
-    int getSecondLargest(vector<int> &arr){
+    public:
+    // if there is not any duplicate
+    // int getSecondLargest(vector<int> &arr){
+    //     if(arr.size() < 2) return -1;
+    //     sort(arr.begin(),arr.end());//T.c. O(nlogn)
+    //     return arr[arr.size() - 2];
+    // }
+    // int getSecondLargest(vector<int> &arr){//Better
+    //     if(arr.size() < 2) return -1;
+    //     int largest = *max_element(arr.begin(),arr.end());//T.c. O(n) get actual largest
+    //     int slargest = INT_MIN;
+    //     for (int i = 0; i < arr.size(); i++){//T.c. O(n)
+    //         if (arr[i]>slargest && arr[i]!= largest)
+    //             slargest = arr[i];
+    //     }
+    //     return slargest;
+    // }
+    int getSecondLargest(vector<int> &arr){//Optimal
         if(arr.size() < 2) return -1;
         int largest = INT_MIN;
         int slargest = INT_MIN;
-        for (int i = 0; i < arr.size(); i++){//O(n)
+        for (int i = 0; i < arr.size(); i++){//T.c. O(n)
             if (arr[i]>largest){
                 largest = arr[i];
                 slargest = largest;
@@ -26,23 +42,3 @@ int main(){
     cout<<s.getSecondLargest(vec);
     return 0;
 }
-//     public://Brute
-//     int getSecondLargest(vector<int> &arr){//if there is not any duplicate
-//         if(arr.size() < 2) return -1;
-//         sort(arr.begin(),arr.end());//T.c. O(nlogn)
-//         return arr[arr.size() - 2];
-//     }
-//
-//     public: //Better
-//     int getSecondLargest(vector<int> &arr){
-//         if(arr.size() < 2) return -1;
-//         int largest = *max_element(arr.begin(),arr.end());//O(n)-->get actual largest
-//
-//         int slargest = INT_MIN;
-//         for (int i = 0; i < arr.size(); i++){//O(n)
-//             if (arr[i]>slargest && arr[i]!= largest){
-//                 slargest = arr[i];
-//             }
-//         }
-//         return slargest;
-//     }

@@ -1,9 +1,4 @@
-/*Given an array nums, return true if the array was originally sorted in non-decreasing order,
-then rotated some number of positions (including zero). 
-Otherwise, return false.
-Constraints: 
-1 <= nums.length <= 100
-1 <= nums[i] <= 100*/
+//check if sorted or not
 #include<iostream>
 #include<vector>
 
@@ -12,16 +7,17 @@ using namespace std;
 class Solution {
 public:
     bool check(vector<int>& nums) {
-        if (nums.size() == 1) return true;
-        for (int i = 0; i < nums.size(); i++){
-            
-            
+        if (nums.size() <= 1) return true;
+        for (int i = 1; i < nums.size(); i++){
+            if (nums[i]< nums[i-1])
+                return false;
         }
-        
+        return true;
     }
 };
 int main(){
-    
+    vector<int> arr = {1, 2, 3, 4, 5};
     Solution s;
+    cout<<s.check(arr);
     return 0;
 }
