@@ -8,12 +8,13 @@ using namespace std;
 class Solution{
     public:
     // if there is not any duplicate
-    // int getSecondLargest(vector<int> &arr){
+    // int getSecondLargest(vector<int> &arr){          //Brute
     //     if(arr.size() < 2) return -1;
     //     sort(arr.begin(),arr.end());//T.c. O(nlogn)
     //     return arr[arr.size() - 2];
     // }
-    // int getSecondLargest(vector<int> &arr){//Better
+
+    // int getSecondLargest(vector<int> &arr){          //Better
     //     if(arr.size() < 2) return -1;
     //     int largest = *max_element(arr.begin(),arr.end());//T.c. O(n) get actual largest
     //     int slargest = INT_MIN;
@@ -23,7 +24,8 @@ class Solution{
     //     }
     //     return slargest;
     // }
-    int getSecondLargest(vector<int> &arr){//Optimal
+    
+    int getSecondLargest(vector<int> &arr){             //Optimal
         if(arr.size() < 2) return -1;
         int largest = INT_MIN;
         int slargest = INT_MIN;
