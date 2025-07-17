@@ -16,7 +16,7 @@ public:
     }
 };
 int main(){
-    vector<int> arr = {1, 2, 3, 4, 5};
+    vector<int> arr = {1, 7, 3, 4, 5};
     Solution s;
     cout<<s.check(arr);
     return 0;

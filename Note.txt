@@ -1,14 +1,14 @@
 1. cann't print 2D vector?
     for(auto& row: arr){
-            for (int element : row){
-                cout<<element<<" ";
+            for (int i : row){
+                cout<<i<<" ";
             }
-    }
+    } here i is the reference to the element not index anymore 
 
 2. `==` comparing operator & `=` is assignment operator
 
-3. vector<int> arr(size,set_values);
-   int arr[size] = {value};
+3. vector<int> arr(size,set_values);      /vector<int> vec = {1, 2, 3, 4, 5};
+   int arr[size] = {value};       /  int arr[] = {1, 2, 3, 4, 5};
 
 4. return {}; return empty vector
    return {abla, tabla}; for pair
@@ -35,6 +35,7 @@
 
 10. #include<algorithm>
      int low = *max_element(arr.begin(), arr.end());
+     reverse(arr, arr+n)         /        reverse(arr.begin(), arr.end()); start & end 
 
      #include<numeric>
      int high = accumulate(weights.begin(), weights.end(), 0); sum of all elements
@@ -45,7 +46,8 @@
 11. cout<<boolalpha<<function(arr,k); return true/false;
     
             mid, low, high is the index & arr[mid], arr[low], arr[high] is the element;
-12. vector<int> vec(n, 0); container having 0s
-      int arr[n] = {0};
+
+12. container having 0s
+      vector<int> vec(n, 0);  / int arr[n] = {0};
      
                                            
