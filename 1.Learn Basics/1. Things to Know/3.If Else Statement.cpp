@@ -27,7 +27,7 @@ int main(){
             cout<<", but retirement soon.";
         }
         else if (age > 57){
-            cout<<"retirement time.";
+            cout<<" retirement time.";
         }
     }
     return 0;   

@@ -1,0 +1,6 @@
+    Patterns
+
+1. for the outer loop count the number of the lines
+2. focus on columns --> connect them somehow with rows
+3. print '*' inside the inner for loop
+4. observe syymetry in case of some patterns
