@@ -12,7 +12,7 @@ using namespace std;
 void FullPyramid(int n){
     for (int i = 1; i <= n; i++){
         //space
-        for (int j = 0; j < n-i+1; j++){
+        for (int j = 0; j < n-i; j++){
             cout<<" ";
         }
         // star
@@ -37,30 +37,36 @@ void FullPyramid(int n){
 */
 void usingNumber(int n){
     for (int i = 1; i <= n; i++){
-        int cnt = 0;
         //space
-        for (int j = 0; j < n-i+1; j++){
+        for (int j = 0; j <= n-i; j++){
             cout<<" ";
         }
         // number
-        for (int j = 0; j < 2*i-1; j++){
-            cnt++;
-            cout<<cnt;
+        for (int j = 1; j <= 2*i-1; j++){
+            cout<<j;
         }
         cout<<endl;
     }
 }
+
+/*
+
+     A
+    ABC
+   ABCDE
+  ABCDEFG
+ ABCDEFGHI
+
+*/
 void usingAlphabet(int n){
     for (int i = 1; i <= n; i++){
-        int cnt = 0;
         //space
-        for (int j = 0; j < n-i+1; j++){
+        for (int j = 0; j <= n-i; j++){
             cout<<" ";
         }
-        // alphabet
+        // number
         for (int j = 0; j < 2*i-1; j++){
-            cout<<char(65 + cnt);
-            cnt++;
+            cout<<char('A' +j);
         }
         cout<<endl;
     }
@@ -68,8 +74,8 @@ void usingAlphabet(int n){
 
 int main(){
     int n= 5;
-    // FullPyramid(n);
-    // usingNumber(n);
+    FullPyramid(n);
+    usingNumber(n);
     usingAlphabet(n);
     return 0;
 }
