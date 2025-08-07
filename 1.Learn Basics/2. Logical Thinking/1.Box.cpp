@@ -1,11 +1,9 @@
 /*
 
-* * * * 
-* * * * 
-* * * * 
-* * * * 
-
-
+* * * * -->1st row ->col 1 2 3 4
+* * * * -->2nd row ->col 1 2 3 4
+* * * * -->3rd row ->col 1 2 3 4
+* * * * -->4th row ->col 1 2 3 4
 
 */
 #include<bits/stdc++.h>
