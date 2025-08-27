@@ -1,0 +1,104 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	//"Cpp": {
+	"include":{
+		"prefix": "include",
+		"body": [
+			"#include<bits/stdc++.h>",
+			"using namespace std;",
+			"void function(int n){",
+			"    $0",
+			"}",
+			"int main(){",
+			"    $0",
+			"    return 0;",
+			"}"
+		],
+		"description": "Boilerplate code with include and main function"
+	},
+	
+	"class_structure":{
+		"prefix": "raj",
+		"body": [
+			"//description",
+			"//#include<bits/stdc++.h>",
+			"#include<iostream>",
+			"#include<vector>",
+			"",
+			"using namespace std;",
+			"",
+			"class Solution{",
+			"    public:",
+			"    int method(vector<int>& arr){",
+			"        $0",
+			"    }",
+			"};",
+			"int main(){",
+			"    vector<int> arr = {1,2,3,4,5,6,7};",
+			"    $0",
+			"    Solution s;",
+			"    return 0;",
+			"}"
+		],
+		"description": "Boilerplate code of class object"
+	},
+
+	"print elements":{
+		"prefix": "fr",
+		"body": [
+    		"for (auto& i : arr){",
+        		"cout<<i <<;",
+    		"}",
+		],
+		"description": "Boilerplate code to check"
+	},
+
+	// "check":{
+	// 	"prefix": "ct",
+	// 	"body": [
+	// 		"cout<<low<<<<mid<<<<high<<endl;",
+	// 	],
+	// 	"description": "Boilerplate code check"
+	// },
+
+	"Linked List":{
+		"prefix": "ll",
+		"body": [
+			"//problem_description",
+			"#include<iostream>",
+			"#include<vector>",
+			"",
+			"using namespace std;",
+			"",
+			"class Node{",
+			"    public:",
+			"    int data;",
+			"    Node* next;",
+			"    Node() {",
+			"       data = 0;",
+			"       next = NULL;",
+			"    }",
+			"    Node(int value) {",
+			"       this->data = data;",
+			"       this->next = NULL;",
+			"    }",
+			"};",
+			"class Solution{",
+			"    public:",
+			"    int method(vector<int> &arr){",
+			"        $0",
+			"    }",
+			"};",
+			"int main(){",
+			"    vector<int> arr = {2, 5, 8, 7}",
+			"    $0",
+			"    return 0;",
+			"}"
+		],
+		"description": "Boilerplate code of class object"
+	},
+}

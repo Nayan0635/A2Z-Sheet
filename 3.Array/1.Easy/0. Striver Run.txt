@@ -1,0 +1,38 @@
+//blind sheet
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+    int largest(vector<int> & arr){
+        int maxi = arr[0];
+        for(int i = 1; i< arr.size(); i++){
+            if(arr[i] > maxi){
+                maxi = arr[i];
+            }
+            return maxi;
+        }
+    }
+
+    vector<int> removeDuplicates(vector<int>& arr){
+        
+        return arr;
+    }
+    
+    vector<int> moveZeros(vector<int>& arr){
+        vector<int> temp;
+        for (int i = 0; i < arr.size(); i++){
+            temp.push_back(arr[i]);
+        }
+        for (int i = 0; i < temp.size(); i++){
+            arr[i] = temp[i];
+        }
+        for (int i = temp.size(); i < arr.size(); i++){
+            arr[i] = 0;
+        }
+        return arr;
+    }
+};
+int main(){
+    return 0;
+}

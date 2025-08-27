@@ -1,4 +1,4 @@
-// {
+{
 //     "code-runner.saveAllFilesBeforeRun": true,
 //     "code-runner.saveFileBeforeRun": true,
 //     "editor.accessibilitySupport": "off",
@@ -6,7 +6,10 @@
 //     "editor.guides.bracketPairs": true,
 //     "editor.mouseWheelZoom": true,
 //     "editor.scrollbar.horizontalScrollbarSize": 20,
-//     "code-runner.runInTerminal": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && .\\ $fileNameWithoutExt",
+    },
 //     "workbench.list.fastScrollSensitivity": 1,
 //     "screencastMode.mouseIndicatorColor": "#d250a5",
 //     "files.refactoring.autoSave": false,
@@ -65,4 +68,4 @@
 //     "files.associations": {
 //         "iostream": "cpp"
 //     },
-// }
+}

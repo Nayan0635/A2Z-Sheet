@@ -34,3 +34,25 @@
 // 		}
 // 	]
 // }
+
+// {
+//     "version": "2.0.0",
+//     "tasks": [
+//         {
+//             "label": "Build C++ file",
+//             "type": "shell",
+//             "command": "g++",
+//             "args": [
+//                 "-g",
+//                 "${file}",
+//                 "-o",
+//                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
+//             ],
+//             "group": {
+//                 "kind": "build",
+//                 "isDefault": true
+//             },
+//             "problemMatcher": ["$gcc"]
+//         }
+//     ]
+// }25/08/25

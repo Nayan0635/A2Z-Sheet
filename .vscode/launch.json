@@ -70,3 +70,25 @@
 //         }
 //     ]
 // }
+
+
+
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "name": "Run C++ Program",
+//             "type": "cppdbg",
+//             "request": "launch",
+//             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+//             "args": [],
+//             "stopAtEntry": false,
+//             "cwd": "${fileDirname}",
+//             "environment": [],
+//             "console": "integratedTerminal",
+//             "preLaunchTask": "Build C++ file",
+//             "MIMode": "gdb",
+//             "miDebuggerPath": "gdb.exe"
+//         }
+//     ]
+// }25/08/25-->need not 

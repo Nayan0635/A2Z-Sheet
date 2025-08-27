@@ -26,8 +26,7 @@ int main(){
     vector<int> vec = {1, 22, 3, 4, 5};
     int n = vec.size();
     Solution s;
-    cout<<s.largest(vec);    
-    cout<<s.findlargest(vec, n);    
-
+    cout<<s.largest(vec)<<endl;    
+    cout<<s.findlargest(vec, n)<<endl;
     return 0;
 }
