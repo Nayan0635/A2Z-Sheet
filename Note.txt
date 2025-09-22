@@ -1,3 +1,4 @@
+
 1. cann't print 2D vector?
     for(auto& row: arr){
             for (int i : row){
@@ -49,5 +50,11 @@
 
 12. container having 0s
       vector<int> vec(n, 0);  / int arr[n] = {0};
-     
-                                           
+   
+13. select multipe lines -->alt+cursor
+   -->ctrl+shift+K(delete)
+   -->ctrl+L(copy)
+   (place cursor in front)
+   -->shift+END(select)
+   show code error
+   -->ctrl+shift+m(exter)/ shift+F8(inter)

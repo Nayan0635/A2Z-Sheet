@@ -1,4 +1,0 @@
-(i)     algorithm
-(ii)    containers
-(iii)   function
-(iv)    iterators
