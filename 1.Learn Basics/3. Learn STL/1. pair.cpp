@@ -1,4 +1,4 @@
-// contaier pair
+// container pair
 #include<bits/stdc++.h>
 using namespace std;
 void explainPair(){

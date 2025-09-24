@@ -11,7 +11,7 @@ int main(){
     }
 
     cout<<"\nv.end()"<<endl;
-    for (vector<int> :: iterator it = v.end()-1; it>= v.begin(); --it){
+    for (vector<int> :: iterator it = v.end()-1; it>= v.begin(); --it){//pointing somewhere right after the last element
         cout<<*it<<" ";
     }
 
