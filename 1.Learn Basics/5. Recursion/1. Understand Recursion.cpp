@@ -1,4 +1,4 @@
-/*
+/* video 19:19 come back
 when a function calls itself
 until a specified condition is met
 segmentation fault -->stack overflow here numerous function calls waiting

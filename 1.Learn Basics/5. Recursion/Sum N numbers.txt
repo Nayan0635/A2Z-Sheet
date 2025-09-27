@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+int add_return(int n){         //int (4+3+2+1)
+    if (n == 0) return 0;
+    return n + add_return(n-1);
+}
+
+void void_add(int i, int sum){  //void(4+3+2+1)
+    if (i < 1){
+        cout<<sum<<endl;
+        return;
+    }
+    void_add(i-1, sum+i);
+}
+
+// int return_backtrack(int i, int n, int s){   //int (1+2+3+4) backtrcaking
+//     if (i > n)    return 0;
+//     s =  return_backtrack(i+1, n, s+i);
+//     return s;
+// }
+
+// void void_backtrack(int i, int n, int s){
+//     if (i > n){
+//         cout<<s<<endl;
+//         return;
+//     }
+//     void_backtrack(i+1, n, s);
+//     s = s + i;
+// }
+
+int main(){  
+int num = 4;
+    cout<<add_return(num)<<endl;
+    add_void(num);
+    
+    // cout<<return_backtrack(1, num, 0);
+    // void_backtrack(1, num, 0);
+    return 0;
+}
