@@ -1,0 +1,4 @@
+arr[mini] = arr[mini] + arr[i] - (arr[i] = arr[mini]);
+int n = sizeof(arr)/ sizeof(arr[0]);
+
+stop using for 

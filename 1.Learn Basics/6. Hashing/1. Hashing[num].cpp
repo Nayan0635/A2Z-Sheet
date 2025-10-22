@@ -1,3 +1,4 @@
+/*0:00 to 22:07*/
 #include<bits/stdc++.h>
 using namespace std;
 /*
@@ -5,21 +6,15 @@ int arr[1e7] // 10^7 glbally
 bool arr[]  //10^8 globally
 */
 
-// int func(int number, int arr){
-//     int cnt = 0;
-//     int n = arr.size();
-//     for (int i = 0; i < n; i++){
-//         if (arr[i] == number){
-//             /* code */
-//         }
-//         for (int i = 0; i < n; i++)
-//         {
-//             /* code */
-//         }
-        
-//     }
-//     return cnt;
-// }
+int func(int number, int arr[], int n){
+    int cnt = 0;
+    for (int i = 0; i < n; i++){
+        if (arr[i] == number){
+            cnt = cnt+1;
+        }
+    }
+    return cnt;
+}
 
 
 int main(){
