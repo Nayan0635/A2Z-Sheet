@@ -1,4 +1,4 @@
-//select the minimum
+//select the minimum [14, 9, 15 , 12, 6, 8, 13] put at front 
 #include<bits/stdc++.h>
 using namespace std;
 void selection_sort(int arr[], int n){
